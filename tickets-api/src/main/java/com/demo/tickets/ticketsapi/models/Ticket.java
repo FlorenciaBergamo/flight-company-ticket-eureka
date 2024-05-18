@@ -10,18 +10,23 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+
 public class Ticket {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private double flight;
+    private String email;
+    private String passport;
+    private FlightDto flight;
 
 
-    public Ticket(String name, double flight) {
+    public Ticket(String name, String email, String passport, FlightDto flight) {
         this.name = name;
+        this.email = email;
+        this.passport = passport;
         this.flight = flight;
+
     }
 }
 

@@ -19,9 +19,9 @@ public class TicketController {
     @Autowired
     FlightClient flightClient;
 
-    @GetMapping("/all")
+    @GetMapping("")
     public List<Ticket> getAll(){
-        return ticketService.allTickets();
+        return ticketService.getAllTickets();
     }
 
     @GetMapping("/flights")
@@ -34,8 +34,8 @@ public class TicketController {
         ticketService.addTicket(ticket);
     }
 
-    @DeleteMapping("/delete/{ticket_id}")
-    public void deleteTicket(@PathVariable Long id){
-        ticketService.deleteTicketById(id);
-    }
+//    @DeleteMapping("/delete/{ticket_id}")
+//    public void deleteTicket(@PathVariable Long id){
+//        ticketService.deleteTicketById(id);
+//    }
 }

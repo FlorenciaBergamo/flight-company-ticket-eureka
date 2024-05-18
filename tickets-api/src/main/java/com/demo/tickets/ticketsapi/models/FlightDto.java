@@ -15,5 +15,4 @@ public class FlightDto {
     private LocalDateTime arrivingTime;
     private double price;
     private String frequency;
-
 }
